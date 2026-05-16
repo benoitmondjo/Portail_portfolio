@@ -21,6 +21,8 @@
     color: var(--black-color);
 }
 .header .flex .logo .span{
+    font-family: "Holtwood One SC", serif;
+    font-weight: 400;
     color:  var(--main-color);
     font-size: 2rem;
     text-transform: uppercase;
