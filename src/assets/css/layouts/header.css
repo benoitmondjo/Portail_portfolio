@@ -1,0 +1,77 @@
+@import './color.css';
+
+.header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    background-color: var(--white-color);
+
+}
+.header.active{
+    box-shadow: var(--box-shadow);
+}
+
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .flex .logo{
+    font-size: 1.8rem;
+    color: var(--black-color);
+
+}
+.navbar .link{
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    color: var(--light-color);
+}
+
+.navbar .link:hover{
+    color: var(--main-color);
+}
+
+
+#menu-btn{
+    display: none;
+    font-size: 2.5rem;
+    color: var(--black-colorblack);
+    cursor: pointer;
+    &.fa-xmark{
+        transform: rotate(90deg);
+    }
+}
+
+#menu-btn .fa-xmark{
+    transform: rotate(90deg);
+}
+
+
+@media screen and (max-width: 768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .flex{
+        position: relative;
+        
+    }
+    .header .flex .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: var(--border);
+        padding: .5rem;
+        backdrop-filter: blur(1rem);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .flex .navbar .link{
+        display: block;
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+    .header .flex .navbar .link.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
