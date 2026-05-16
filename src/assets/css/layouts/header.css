@@ -1,4 +1,3 @@
-@import './color.css';
 
 .header{
     position: fixed;
@@ -18,14 +17,21 @@
     justify-content: space-between;
 }
 .header .flex .logo{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: var(--black-color);
-
+}
+.header .flex .logo .span{
+    color:  var(--main-color);
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 .navbar .link{
+    display: inline-block;
+    cursor: pointer;
     margin: 0 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--light-color);
+    position: relative;
 }
 
 .navbar .link:hover{
@@ -35,7 +41,7 @@
 
 #menu-btn{
     display: none;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--black-colorblack);
     cursor: pointer;
     &.fa-xmark{
@@ -65,13 +71,19 @@
         padding: .5rem;
         backdrop-filter: blur(1rem);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background-color: var(--white-color);
     }
     .header .flex .navbar .link{
         display: block;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         margin: 1rem;
+        padding: .5rem;
+        
     }
-    .header .flex .navbar .link.active{
+    .header .flex .navbar .link:hover{
+        padding-left: 2rem;
+    }
+    .header .flex .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 }
