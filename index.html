@@ -29,9 +29,23 @@
 
 
 
-    <!-- grid cards debut-->
+    <!-- hero dbut-->
         <!-- ecrire votree structure html ici -->
-    <!-- grid cards fin -->
+    <!-- hero fin -->
+
+
+    <!-- [ENOCK JAPHET] feature/home_grid_cards -->
+
+    <section id="cards">
+        <!-- En-tête de la section -->
+        <div class="section-header">
+            <h2 class="section-title">Découvrez nos développeurs web</h2>
+            <p class="section-subtitle">Projets · Compétences · Talents</p>
+        </div>
+        <div class="grid" id="cards-grid">
+        </div>
+
+    </section>
 
 
 
@@ -40,6 +54,170 @@
     <!-- footer debut fin -->
 
     <script type="module" src="./src/assets/js/header.js"></script>
+    <script>
+        /* ----------------------------------------------------------------
+           Données des 12 développeurs — 3 colonnes × 4 lignes
+           Chaque développeur met à jour son propre objet ici.
+        ---------------------------------------------------------------- */
+        const developers = [
+
+            /* ── Ligne 1 ── */
+            {
+                initials:    "NEJ",
+                name:        "KOMBILA NZIENGUI Enock Japhet",
+                role:        "Développeur web et web mobile",
+                desc:        "Passioné par les interfaces interactives et l'animation web. Spécialisé dans la création d'expériences utilisateur fluides avec React.",
+                tags:        ["HTML", "CSS", "React", "JavaScript"],
+                avatarClass: "av-1",
+                backClass:   "back-1",
+                link:        "#"
+            },
+            {
+                initials:    "SK",
+                name:        "Sarah Koumba",
+                role:        "Développeuse web et web mobile",
+                desc:        "Experte en responsive design et accessibilité. J'adore transformer des maquettes Figma en code pixel-perfect avec Vue.js.",
+                tags:        ["HTML", "CSS", "Vue.js", "JavaScript"],
+                avatarClass: "av-2",
+                backClass:   "back-2",
+                link:        "#"
+            },
+            {
+                initials:    "MN",
+                name:        "Mark Nze",
+                role:        "Développeur web et web mobile",
+                desc:        "Développeur full-stack orienté backend. Je me concentre sur la création d'APIs robustes et l'optimisation des performances avec Node.js.",
+                tags:        ["HTML", "CSS", "Node.js", "JavaScript"],
+                avatarClass: "av-3",
+                backClass:   "back-3",
+                link:        "#"
+            },
+
+            /* ── Ligne 2 ── */
+            {
+                initials:    "AM",
+                name:        "Aïcha Mbadinga",
+                role:        "Développeuse web et web mobile",
+                desc:        "Designer-développeuse avec un œil affûté pour l'esthétique. Crée des interfaces modernes en alliant design thinking et code propre.",
+                tags:        ["HTML", "CSS", "Figma", "JavaScript"],
+                avatarClass: "av-4",
+                backClass:   "back-4",
+                link:        "#"
+            },
+            {
+                initials:    "PO",
+                name:        "Patrick Ondongo",
+                role:        "Développeur web et web mobile",
+                desc:        "Passionné par les workflows collaboratifs et le versioning. Expert Git qui aime résoudre des problèmes complexes avec du code élégant.",
+                tags:        ["HTML", "CSS", "Git", "JavaScript"],
+                avatarClass: "av-5",
+                backClass:   "back-5",
+                link:        "#"
+            },
+            {
+                initials:    "EM",
+                name:        "Esther Mboumba",
+                role:        "Développeuse web et web mobile",
+                desc:        "Polyvalente avec un intérêt pour l'intégration frontend-backend. Explore les possibilités entre JavaScript et Python pour des solutions innovantes.",
+                tags:        ["HTML", "CSS", "Python", "JavaScript"],
+                avatarClass: "av-6",
+                backClass:   "back-6",
+                link:        "#"
+            },
+
+            /* ── Ligne 3 ── */
+            {
+                initials:    "AM",
+                name:        "Aïcha Mbadinga",
+                role:        "Développeuse web et web mobile",
+                desc:        "Designer-développeuse avec un œil affûté pour l'esthétique. Crée des interfaces modernes en alliant design thinking et code propre.",
+                tags:        ["HTML", "CSS", "Figma", "JavaScript"],
+                avatarClass: "av-4",
+                backClass:   "back-4",
+                link:        "#"
+            },
+            {
+                initials:    "PO",
+                name:        "Patrick Ondongo",
+                role:        "Développeur web et web mobile",
+                desc:        "Passionné par les workflows collaboratifs et le versioning. Expert Git qui aime résoudre des problèmes complexes avec du code élégant.",
+                tags:        ["HTML", "CSS", "Git", "JavaScript"],
+                avatarClass: "av-5",
+                backClass:   "back-5",
+                link:        "#"
+            },
+            {
+                initials:    "EM",
+                name:        "Esther Mboumba",
+                role:        "Développeuse web et web mobile",
+                desc:        "Polyvalente avec un intérêt pour l'intégration frontend-backend. Explore les possibilités entre JavaScript et Python pour des solutions innovantes.",
+                tags:        ["HTML", "CSS", "Python", "JavaScript"],
+                avatarClass: "av-6",
+                backClass:   "back-6",
+                link:        "#"
+            },
+
+            /* ── Ligne 4 ── */
+            {
+                initials:    "JM",
+                name:        "Jean-Marie Olivier",
+                role:        "Développeur web et web mobile",
+                desc:        "Passioné par les interfaces interactives et l'animation web. Spécialisé dans la création d'expériences utilisateur fluides avec React.",
+                tags:        ["HTML", "CSS", "React", "JavaScript"],
+                avatarClass: "av-1",
+                backClass:   "back-1",
+                link:        "#"
+            },
+            {
+                initials:    "SK",
+                name:        "Sarah Koumba",
+                role:        "Développeuse web et web mobile",
+                desc:        "Experte en responsive design et accessibilité. J'adore transformer des maquettes Figma en code pixel-perfect avec Vue.js.",
+                tags:        ["HTML", "CSS", "Vue.js", "JavaScript"],
+                avatarClass: "av-2",
+                backClass:   "back-2",
+                link:        "#"
+            },
+            {
+                initials:    "MN",
+                name:        "Mark Nze",
+                role:        "Développeur web et web mobile",
+                desc:        "Développeur full-stack orienté backend. Je me concentre sur la création d'APIs robustes et l'optimisation des performances avec Node.js.",
+                tags:        ["HTML", "CSS", "Node.js", "JavaScript"],
+                avatarClass: "av-3",
+                backClass:   "back-3",
+                link:        "#"
+            }
+        ];
+
+        /* ----------------------------------------------------------------
+           Construction d'une carte
+        ---------------------------------------------------------------- */
+        function buildCard(dev) {
+            const tagsHTML = dev.tags
+                .map(tag => `<span class="card-tag">${tag}</span>`)
+                .join('');
+
+            return `
+                <div class="card-stack">
+                    <div class="card-back ${dev.backClass}"></div>
+                    <div class="card-front">
+                        <div class="card-avatar ${dev.avatarClass}">${dev.initials}</div>
+                        <p class="card-name">${dev.name}</p>
+                        <p class="card-role">${dev.role}</p>
+                        <p class="card-desc">${dev.desc}</p>
+                        <div class="card-tags">${tagsHTML}</div>
+                        <a href="${dev.link}" class="card-btn">Voir le portfolio →</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        /* Injection des 12 cartes dans la grille */
+        document.getElementById('cards-grid').innerHTML =
+            developers.map(buildCard).join('');
+    </script>
+    <!-- [ENOCK JAPHET] script fin -->
+
 </body>
 </html>
-
