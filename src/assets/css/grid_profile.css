@@ -1,0 +1,194 @@
+@import "./layouts/reser.css";
+
+.profiles {
+  padding: 10rem .5rem 8rem .5rem;
+}
+
+.profiles .section-header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+
+.profiles .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--main-color);
+  margin-bottom: 8px;
+}
+
+x
+.profiles .section-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: var(--light-color);
+}
+
+
+
+.profiles .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:2rem;
+  margin: 0 auto;
+}
+
+
+
+.card-front {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: .1rem solid #c1bebe;
+  border-top: .6rem solid var(--main-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.card-front:hover{
+  transform: scale(1.1);
+  box-shadow:  0 .5rem 1rem rgba(0, 0, 0, .4);
+
+}
+
+
+
+.card-avatar {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.card-avatar img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.card-name {
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #111111;
+  margin-bottom: .6rem;
+}
+
+.card-role {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2f2e2e;
+  margin-bottom: 1rem;
+}
+
+.card-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--light-color);
+  line-height: 1.5;
+  margin-bottom: .8rem;
+  /* flex: 1; */
+  height: 7rem;
+  padding: .5rem 0.3rem;
+  overflow-y: auto;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: .7rem;
+}
+
+.card-tag {
+  background-color: #D4D6F2;
+  border: 1px solid #B6B9D7;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: .7rem;
+  color: #242D3C;
+  padding: .4rem .8rem;
+}
+
+.card-btn {
+  display: inline-block;
+  background-color: #1B407D;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 12px;
+  padding: 5px 26px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.card-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+
+/* Source charte : palette des 6 couleurs de profil
+.back-1 { background-color: #481CD6; }
+.back-2 { background-color: #1831C1; }
+.back-3 { background-color: #204A8E; }
+.back-4 { background-color: #951CD6; }
+.back-5 { background-color: #5788F2; }
+.back-6 { background-color: #EA63CA; }
+
+
+
+.av-1 { background-color: #481CD6; }
+.av-2 { background-color: #1831C1; }
+.av-3 { background-color: #204A8E; }
+.av-4 { background-color: #951CD6; }
+.av-5 { background-color: #5788F2; }
+.av-6 { background-color: #EA63CA; }
+ */
+
+
+
+@media screen and (max-width: 1100px){
+
+  .profiles .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 700px){
+
+  .profiles .grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+  .profiles .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .profiles .section-subtitle {
+    font-size: 1.2rem;
+  }
+}

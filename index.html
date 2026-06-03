@@ -4,10 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/assets/css/grid_profile.css">
     <title>v2_portail_portfolio</title>
   </head>
   <body>
-    <div id="app"></div>
+    
+
+    <!-- section card pofile -->
+         <section id="profiles" class="profiles main-container" 
+           >
+        <!-- En-tête de la section -->
+         <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Découvrez nos développeurs web</h2>
+                <p class="section-subtitle">Projets · Compétences · Talents</p>
+            </div>
+            <div class="container">
+                <div class="grid" id="cards-grid">
+                  <!-- Le JS va generer chaque card ici. Il faut regarder le fichier grid_profile.js-->
+                </div>
+            </div>
+         </div>
+
+
+    </section>
+    <!-- section card pofile end -->
+
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
